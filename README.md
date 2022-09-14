@@ -10,7 +10,7 @@ Dit kan met de volgende commandos (of handmatig)
 ```bash
 wget -O test/assets/100MB.bin https://speed.hetzner.de/100MB.bin
 
-wget -O test/assets/100MB.bin https://speed.hetzner.de/1GB.bin 
+wget -O test/assets/1GB.bin https://speed.hetzner.de/1GB.bin 
 ```
 
 # Kies een server om te starten
