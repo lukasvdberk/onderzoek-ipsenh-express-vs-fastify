@@ -5,7 +5,7 @@ import {makePostRequestData} from "./tests/post-data.json";
 import * as fs from "fs";
 const nodeExcel = require('excel-export');
 
-const TEST_PERFORMANCE_EXCEL_LOCATION = 'test-results.csv'
+const TEST_PERFORMANCE_EXCEL_LOCATION = process.argv[2] // first argument is the location of the excel file
 
 /**
  * Performs a function 100 times and measures the time it took in seconds to complete the 100 tests

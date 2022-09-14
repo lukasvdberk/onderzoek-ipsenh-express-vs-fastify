@@ -1,5 +1,14 @@
 # Hemiron onderzoek Fastify vs ExpressJS
 
+Om de tests uit te kunnen voeren moet de volgende software geïnstalleerd worden met de versies die hiervoor zijn beschreven.
+* NodeJS
+  * https://nodejs.org/en/download/ 
+* NPM 
+  * https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+* Typescript
+  * https://www.npmjs.com/package/typescript
+
+
 Installeer de dependencies
 ```bash
 npm install
@@ -25,7 +34,14 @@ npm run start-fastify-server
 ```
 
 Wanneer je 1 van de servers heb gestart is kan je de tests uitvoeren (doe dit in een aparte terminal zodat de webserver wel aan blijft). 
-Dit doe je door middel van het draaien van het volgende script.
+Dit doe je door middel van het draaien van 1 van de volgende scripts:
+
+Voor Fastify 
 ```bash
-npm run start-performance-tests
+npm run start-performance-tests-fastify
+``` 
+
+Voor ExpressJS
+```bash
+npm run start-performance-tests-express
 ``` 
