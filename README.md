@@ -28,7 +28,7 @@ Start de ExpressJS server
 npm run start-express-server
 ```
 
-Start de ExpressJS server
+Start de Fastify server
 ```bash
 npm run start-fastify-server
 ```
