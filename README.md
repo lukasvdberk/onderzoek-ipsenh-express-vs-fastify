@@ -24,9 +24,8 @@ Start de ExpressJS server
 npm run start-fastify-server
 ```
 
-
-
-Wanneer je 1 van de servers heb gestart kan je de tests uitvoeren. Dit doe je door middel van het draaien van het volgende script (in een aparte terminal)
+Wanneer je 1 van de servers heb gestart is kan je de tests uitvoeren (doe dit in een aparte terminal zodat de webserver wel aan blijft). 
+Dit doe je door middel van het draaien van het volgende script.
 ```bash
 npm run start-performance-tests
-```
+``` 
