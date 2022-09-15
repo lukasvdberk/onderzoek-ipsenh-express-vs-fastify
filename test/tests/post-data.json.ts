@@ -1,5 +1,5 @@
-import got from 'got'
 import axios from "axios";
+import * as assert from "assert";
 
 const URL = 'http://localhost:3000'
 
@@ -13,9 +13,11 @@ const postData = [
 ]
 export async function makePostRequestData() {
     // make a post request with axios
-    return axios(   {
+    const response = await axios(   {
         method: 'POST',
         url: URL,
         data: postData, // this is the body
     });
+
+    assert(response.status == 201);
 }
