@@ -1,15 +1,29 @@
 import { NestFactory } from '@nestjs/core';
-import {FastifyAppModule} from "./fastify-app.module";
 import {FastifyAdapter, NestFastifyApplication} from "@nestjs/platform-fastify";
+import {AppModule} from "./app.module";
 
 async function bootstrap() {
     const app = await NestFactory.create<NestFastifyApplication>(
-        FastifyAppModule,
+        AppModule,
         new FastifyAdapter()
     );
     app.getHttpAdapter()
-       .getInstance()
-       .register(require('@fastify/multipart'))
+        .getInstance()
+        .use(
+            (req, res, next) => {
+                // parse multipart/form-data requests
+                if (req.headers['content-type']?.includes('multipart/form-data')) {
+                    req.on('data', (chunk: any) => {});
+                    req.on('end', () => {
+                        res.end()
+                    });
+                }
+                // handle standard request
+                else {
+                    next();
+                }
+            }
+        )
     await app.listen(3000);
 }
 bootstrap();

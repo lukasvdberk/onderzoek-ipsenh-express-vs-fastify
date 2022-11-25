@@ -1,4 +1,4 @@
-import {Controller, Get, Post} from '@nestjs/common';
+import {Controller, Request, Get, Post} from '@nestjs/common';
 
 @Controller('')
 export class AppController {
@@ -42,4 +42,7 @@ export class AppController {
 
   @Post()
   receivePostData(): void {}
+
+  @Post('files/single-file')
+  uploadFile(@Request() req): void {}
 }

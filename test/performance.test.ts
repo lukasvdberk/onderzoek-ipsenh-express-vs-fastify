@@ -17,7 +17,7 @@ async function performTest100Times(functionToPerform: () => Promise<any>): Promi
     const taskName = 'task run'
     stopWatchTimer.start(taskName);
     // perform 100 times
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10; i++) {
         await functionToPerform()
     }
 
@@ -39,7 +39,7 @@ async function performTests() {
     // get request tests
     const combinedTestResults = [];
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 1; i++) {
 
         const getRequestTimeInSeconds = await performTest100Times(makeGetRequests)
         const postRequestTimeInSeconds = await performTest100Times(makePostRequestData)

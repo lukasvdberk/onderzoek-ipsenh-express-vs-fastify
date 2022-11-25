@@ -22,14 +22,12 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@fastify/multipart": "^6.0.0",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/platform-fastify": "^9.0.11",
     "axios": "^0.27.2",
     "excel-export": "^0.5.1",
-    "fastify-multer": "^2.0.3",
     "form-data": "^4.0.0",
     "got": "11.8.5",
     "reflect-metadata": "^0.1.13",
@@ -45,7 +43,6 @@
     "@nestjs/testing": "^9.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "28.1.8",
-    "@types/multer": "^1.4.7",
     "@types/node": "^16.0.0",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
