@@ -3,7 +3,6 @@ import {makeGetRequests} from "./tests/get-data.json";
 import {post100MBFile, post1GBFile} from "./tests/file-upload";
 import {makePostRequestData} from "./tests/post-data.json";
 import * as fs from "fs";
-const nodeExcel = require('excel-export');
 
 const TEST_PERFORMANCE_EXCEL_LOCATION = process.argv[2] // first argument is the location of the excel file
 
@@ -17,7 +16,7 @@ async function performTest100Times(functionToPerform: () => Promise<any>): Promi
     const taskName = 'task run'
     stopWatchTimer.start(taskName);
     // perform 100 times
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 100; i++) {
         await functionToPerform()
     }
 
@@ -39,7 +38,7 @@ async function performTests() {
     // get request tests
     const combinedTestResults = [];
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 1000; i++) {
 
         const getRequestTimeInSeconds = await performTest100Times(makeGetRequests)
         const postRequestTimeInSeconds = await performTest100Times(makePostRequestData)
